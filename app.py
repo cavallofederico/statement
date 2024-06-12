@@ -5,6 +5,13 @@ from transformstatement import transform_statement
 
 def main():
     st.title("Resumen Bancario HSBC")
+    
+    st.markdown(
+        f"""
+        <a href='https://cafecito.app/cavallofederico' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_1.png 1x, https://cdn.cafecito.app/imgs/buttons/button_1_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_1_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_1.png' alt='Invitame un café en cafecito.app' /></a>
+        """,
+        unsafe_allow_html=True
+    )
 
     # Upload PDF file
     pdf_file = st.file_uploader("Elegir Archivo PDF", type="pdf")
