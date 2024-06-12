@@ -32,5 +32,5 @@ def transform_statement(document):
             my_dict["DETALLE"].append(detalle)
         df = DataFrame(my_dict)
 
-    return df.to_csv()
+    return df.to_csv(sep=";")
     
