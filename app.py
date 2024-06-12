@@ -4,7 +4,7 @@ import fitz
 from transformstatement import transform_statement
 
 def main():
-    st.title("Resumen Bancario HSBC")
+    st.title("Resumen Bancario HSBC a CSV")
     
     st.markdown(
         f"""
