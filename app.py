@@ -1,18 +1,11 @@
 import streamlit as st
+from streamlit.components.v1 import components
 import fitz
 
 from transformstatement import transform_statement
 
 def main():
-    st.title("Resumen Bancario HSBC a Excel")
-    st.text("Subí tu resumen bancario de HSBC Argentina y obtenelo en Excel (CSV)")
-    st.markdown(
-        f"""
-        <a href='https://cafecito.app/cavallofederico' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_1.png 1x, https://cdn.cafecito.app/imgs/buttons/button_1_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_1_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_1.png' alt='Invitame un café en cafecito.app' /></a>
-        """,
-        unsafe_allow_html=True
-    )
-    st.markdown("""
+    components.html("""
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16672731166">
 </script>
@@ -23,8 +16,16 @@ def main():
 
   gtag('config', 'AW-16672731166');
 </script>
-                """,
-    unsafe_allow_html=True)
+                """,width=200, height=200)
+    
+    st.title("Resumen Bancario HSBC a Excel")
+    st.text("Subí tu resumen bancario de HSBC Argentina y obtenelo en Excel (CSV)")
+    st.markdown(
+        f"""
+        <a href='https://cafecito.app/cavallofederico' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_1.png 1x, https://cdn.cafecito.app/imgs/buttons/button_1_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_1_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_1.png' alt='Invitame un café en cafecito.app' /></a>
+        """,
+        unsafe_allow_html=True
+    )
 
     # Upload PDF file
     pdf_file = st.file_uploader("Elegir Archivo PDF", type="pdf")
