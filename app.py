@@ -23,7 +23,8 @@ def main():
 
   gtag('config', 'AW-16672731166');
 </script>
-                """)
+                """,
+    unsafe_allow_html=True)
 
     # Upload PDF file
     pdf_file = st.file_uploader("Elegir Archivo PDF", type="pdf")
