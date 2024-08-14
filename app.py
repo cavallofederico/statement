@@ -4,8 +4,8 @@ import fitz
 from transformstatement import transform_statement
 
 def main():
-    st.title("Resumen Bancario HSBC a CSV")
-    
+    st.title("Resumen Bancario HSBC a Excel")
+    st.text("Subí tu resumen bancario de HSBC Argentina y obtenelo en un formato que se puede abrir en Excel")
     st.markdown(
         f"""
         <a href='https://cafecito.app/cavallofederico' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_1.png 1x, https://cdn.cafecito.app/imgs/buttons/button_1_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_1_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_1.png' alt='Invitame un café en cafecito.app' /></a>
