@@ -5,19 +5,20 @@ import fitz
 from transformstatement import transform_statement
 
 def main():
-    components.html("""
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16672731166">
+    st.markdown("""
+    <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16685328378">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-16672731166');
+  gtag('config', 'AW-16685328378');
 </script>
-                """,width=200, height=200)
-    
+</head>
+    """, unsafe_allow_html=True)
     st.title("Resumen Bancario HSBC a Excel")
     st.text("Subí tu resumen bancario de HSBC Argentina y obtenelo en Excel (CSV)")
     st.markdown(
